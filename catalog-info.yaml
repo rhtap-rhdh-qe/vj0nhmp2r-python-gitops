@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vj0nhmp2r-python-gitops
+  description: This is GitOps manifest for vj0nhmp2r-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=vj0nhmp2r-python
+    backstage.io/kubernetes-id: vj0nhmp2r-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: vj0nhmp2r-python
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:vj0nhmp2r-python
